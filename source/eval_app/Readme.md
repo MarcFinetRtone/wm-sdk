@@ -19,6 +19,15 @@ This application provides to a node the following capabilities:
     - to return a node's LED state (i.e is the LED ON or OFF ?)
     - to return the message travel time from sink to node
 
+The python script found in the **backend_scripts** folder allows a user to interact
+with the nodes running the app using the **wirepas-gateway-API** if the nodes are part of a
+Wirepas Mesh Network connected to a Wirepas gateway. In this configuration, a remote communication
+channel can be established via MQTT protocol as commands (described above) sent by the user are published
+on dedicated MQTT topics from which gateway can read and parse to send them to the Wirepas Mesh network. By
+subscribing to dedicated topics the user can also get messages (from the set listed above) coming from nodes
+running the Evaluation application. See Readme.md file provided with the script to get more information about
+its usage and how communication via wirepas-gateway-API is handled.
+
 ## Application API
 
 From a communication point, to send and receive data this application:
